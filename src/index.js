@@ -24,7 +24,7 @@ const {
   HOST = 'localhost',
   PORT = 5000,
   SESSION_SECRET = 'secret',
-  CLIENT_URL,
+  CLIENT_ORIGIN,
 } = process.env;
 
 const app = express();
@@ -32,7 +32,7 @@ const app = express();
 passport.use('local', localStrategy);
 
 app.use(cors({
-  origin: CLIENT_URL,
+  origin: CLIENT_ORIGIN,
   credentials: true,
 }));
 
@@ -56,7 +56,7 @@ app.listen(PORT, () => {
   console.log(`
     Server is running on http://${HOST}:${PORT}
 
-    CORS origin ${CLIENT_URL}
+    CORS origin ${CLIENT_ORIGIN}
 
     Available endpoints:
 
