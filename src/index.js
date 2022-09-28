@@ -56,6 +56,8 @@ app.listen(PORT, () => {
   console.log(`
     Server is running on http://${HOST}:${PORT}
 
+    CORS origin ${CLIENT_URL}
+
     Available endpoints:
 
     - expenses
