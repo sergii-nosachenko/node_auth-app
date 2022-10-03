@@ -1,5 +1,5 @@
-# Auth application
-Implement an application that allows user to:
+# Auth endpoint
+This application allows user to:
 - Register using name, email and password (only non authenticated)
   - Inform the users about the rules for a password and check them
   - send and activation email
@@ -22,7 +22,21 @@ Implement an application that allows user to:
   - To change an email you should type the password, confirm the new email and notify the old email about the change
 - 404 for all the other pages
 
-## (Optional) Advanced tasks
-- Implement Sign-up with Google, Facebook, Github (use Passport.js lib)
-- Profile page should allow to add/remove any social account
-- Add authentication to your Accounting App
+# Expenses endpoint
+
+- An expense have a
+  - user
+  - date
+  - title
+  - amount
+  - category (just a label for now)
+  - note (optional text)
+- Expenses are stored in a Postgres DB
+- You have ability to get the stats for (with query params)
+  - some period (from - to)
+  - some user
+  - some categories (one or several)
+
+  Client code is [here](https://github.com/sergii-nosachenko/react_accounting-app-with-db-and-auth/tree/develop)
+
+  [WORKING DEMO](https://sergii-nosachenko.github.io/react_accounting-app-with-db-and-auth/)
